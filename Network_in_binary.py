@@ -1,4 +1,5 @@
 network=raw_input("Vvedite network        ")
+network=network.strip(" ")
 print('\n' + '-' * 30)
 print("\n"*2 + network)
 network=network.split(".")
