@@ -1,5 +1,3 @@
-x=raw_input("Vvedite nazvanie    " )
-
 
 london_co = {
 'r1' : {
@@ -26,6 +24,9 @@ london_co = {
 'routing': True
 }
 }
+x=raw_input("Vvedite nazvanie    " )
+keys=list(london_co[x].keys())
+keys=",".join(keys)
+y=raw_input( "Enter parametr name " +keys +"  ")
 
-print(london_co[x])
-
+print(london_co[x].get(y,"Slava Ukraine"))
