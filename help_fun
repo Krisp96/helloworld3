@@ -1,0 +1,36 @@
+def help_fun(config)
+  wiht open(config,"r") as f:
+    temp=""
+    empty_list=[]
+    first_time=True
+    keys=[]
+    values=[]
+    probel=False
+    for i in f:
+      if first_time and not i.startswitch(" "):
+        temp=i
+        first_time=False
+        probel=False
+      if not i.startswitch(" "):
+        if double_space:
+          values.append(True)
+          keys.append(temp)
+          temp=i
+          probel=False
+        elif probel:
+          values.append(False)
+          keys.append(temp)
+          temp=i
+          probel=False
+        else:
+          values.append(empty_list)
+          keys.append(temp)
+          temp=i
+          probel=False
+      else:
+        if i.startswitch("  "):
+          double_space=True
+        else:
+          probel=True
+    slovar=dict(zip(keys,values))      
+  return(slovar)
