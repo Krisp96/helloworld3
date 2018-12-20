@@ -7,8 +7,8 @@ from concurrent.futures	import ProcessPoolExecutor, as_completed
 
 #IP = input("vvedite IP   ")
 #TIME=input("vvedite vrema avarii   ")
-USER="center"
-PASSWORD="monitor.3-Rop=7."
+USER="*"
+PASSWORD="*"
 
 
 def conn_to_messages_log(IP,TIME):
